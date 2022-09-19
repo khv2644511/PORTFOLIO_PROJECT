@@ -5,7 +5,7 @@
 body {
 	font-size: 14px;
 	background-color:  
-	#51318b;
+	#673399;
 }
 
 /* 전체를 flex로 사용할 필요가 있는가? */
@@ -42,7 +42,7 @@ body {
 
 	line-height: 22px;
 	font-size: 14px;
-	color: #a887e1;
+	color: #bd8fe8;
 	box-sizing: border-box;
 	display: flex;
 	justify-content:flex-start;
@@ -59,19 +59,19 @@ body {
 	display: inline-block;
 	width: 277px;
 	height: 3px;
-	background-color: #a887e1;
+	background-color: #bd8fe8;
 	margin-right: 28px;
 }
 
 /* 밑줄만들기 */
 /* 1. width값을 어떻게 적용해야 하는지?
 2. before,after를 나누지 않고, 줄바꿈이 일어나도 PORTFOLIO POJECT가 다 밑줄처리 되도록하는 방법? */
-.underline::before {
+/* .underline::before {
 	content: "";
 	display: inline;
 	width: 243px;
 	height: 20px;
-	background-color: #d9501a;
+	background-color: #ff4500;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -82,11 +82,15 @@ body {
 	display: inline;
 	width: 162px;
 	height: 20px;
-	background-color: #d9501a;
+	background-color: #ff4500;
 	position: absolute;
 	bottom: 5%;
 	left: 0;
 	z-index: -20;
+} */
+
+.underline {
+	box-shadow:inset 0px -25px #ff4500;
 }
 
 .contents {
@@ -96,14 +100,35 @@ body {
 	flex-direction: column;
 }
 
-.img {
+.section_img {
+	position: relative;
 	width: 26%;
+	overflow: hidden;
 }
 
-.rest_img {
-} 
+.img {
+	width: 100%;
+	margin-bottom: -5%;
+	margin-top: -4%;
+
+	vertical-align: top;
+	object-fit: fill;
+	/* transform: scale(1.1); */
+}
+
+.img_desc {
+	font-size: 30px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50px,-50%);
+	position: absolute;
+	display: inline-block;
+	color: white;
+
+}
 
 .section {
+	/* position: relative; */
 	display: flex;
 	align-items: center;
 	background-color: white;
@@ -132,7 +157,7 @@ body {
 
 /* 글 길어질 때 들여쓰기하기 */
 ul {
-	/* list-style-position: outside; */
+	list-style-position: outside;
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -149,7 +174,7 @@ li::before {
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	background-color: #a887e1;
+	background-color: #bd8fe8;
 	margin-right: 10px;
  }
 
@@ -160,6 +185,6 @@ li::before {
 .list_title {
 	font-size: 18px;
 	font-weight: bolder;
-	color: #51318b;
+	color: #673399;
 	margin-bottom: 32px;
 }
