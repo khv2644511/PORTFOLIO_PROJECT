@@ -38,7 +38,6 @@ body {
 .header_desc {
 	/* vertical-align: middle; */
 	flex: 1;
-
 	line-height: 22px;
 	font-size: 14px;
 	color: #bd8fe8;
@@ -93,10 +92,7 @@ body {
 }
 
 .contents {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
+	width: 100%;
 }
 
 .section_img {
@@ -106,12 +102,10 @@ body {
 }
 
 .img {
+	position: absolute;
 	width: 100%;
-	margin-bottom: -5%;
-	margin-top: -4%;
-
+	object-fit: cover;
 	vertical-align: top;
-	object-fit: fill;
 	/* transform: scale(1.1); */
 }
 
@@ -119,28 +113,20 @@ body {
 	font-size: 30px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50px,-50%);
+	transform: translate(-50%,-50%);
 	position: absolute;
-	display: inline-block;
 	color: white;
-
 }
 
 .section {
-	/* position: relative; */
 	display: flex;
-	align-items: center;
 	background-color: white;
-	/* line-height: 1; */
-	/* justify-content:space-between; */
-}
-
-.section:nth-child(2n+1) {
-	justify-content:flex-start;
+	margin: 24px 0;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .section:nth-child(2n) {
-	justify-content:space-between;
 	flex-direction: row-reverse;
 }
 
@@ -148,24 +134,21 @@ body {
 	color: #818184;
 	font-size: 14px;
 	padding: 24px;
-	align-self: stretch;
-	display: flex;
-	flex-direction: column;
-	/* display: inline-block; */
+	box-sizing: border-box;
+	width: 74%;
 }
 
 /* 글 길어질 때 들여쓰기하기 */
 ul {
-	list-style-position: outside;
-	display:flex;
-	flex-direction: column;
-	justify-content: space-between;
-	flex: 1;
 }
 
-/* li+li {
-	margin-top: 20px;
-} */
+li+li {
+	margin-top: 16px;
+}
+
+li {
+	line-height: 1;
+}
 
 li::before {
 	display: inline-block;
@@ -174,10 +157,10 @@ li::before {
 	height: 10px;
 	border-radius: 50%;
 	background-color: #bd8fe8;
-	margin-right: 10px;
+	margin-right: 17px;
  }
 
-.section + .section {
+.section {
 	margin-top: 24px;
 }
 
